@@ -35,7 +35,8 @@ jobs:
         id: prep-image
         run: |
           TAG=$(cat version.properties | grep "version" | cut -d'=' -f2)
-          IMAGE="docker.pkg.github.com/${{ github.repository }}/hello-app"
+          REGISTRY="ghcr.io"
+          IMAGE="${REGISTRY}/${{ github.repository_owner }}/${{ github.repository }}"
           echo ::set-output name=TAGGED-IMAGE::${IMAGE}:${TAG}
       # Push to the github registry, cache
       - name: Build and push
