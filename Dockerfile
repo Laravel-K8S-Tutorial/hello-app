@@ -1,6 +1,8 @@
 FROM existenz/webstack:7.3
 
 RUN apk -U --no-cache add \
+    php7 \
+    php7-curl \
     php7-ctype \
     php7-json \
     php7-phar \
