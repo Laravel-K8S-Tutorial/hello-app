@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/hello', function () {
     return 'Hello, World!';
 });
+
+Route::get('/health', function () {
+    return 'ok';
+});
+
+Route::get('/readiness', function () {
+    return 'ok';
+});
