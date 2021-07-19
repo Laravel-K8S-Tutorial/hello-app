@@ -16,6 +16,7 @@ RUN apk -U --no-cache add \
         php7-mbstring \
         php7-pdo_mysql \
         php7-ssh2 \
+        php7-xml \
         npm
 
 # Install composer
